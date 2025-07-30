@@ -9,11 +9,29 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  int _selectedIndex = 0;
+
   final List<Color> gradientColors = [
     Colors.black,
     Colors.black87,
     Colors.black54,
   ];
+
+  // final tempe = ["19°C", "15°C", "25°C", "16°C", "15°C", "25°C"];
+
+  final List<Map<String, dynamic>> forecast = [
+    {"temp": "19°C", "icon": FontAwesomeIcons.cloudRain, "time": "9.00"},
+
+    {"temp": "21°C", "icon": FontAwesomeIcons.cloud, "time": "12.00"},
+    {"temp": "30°C", "icon": FontAwesomeIcons.sun, "time": "16.00"},
+    {"temp": "19°C", "icon": FontAwesomeIcons.cloud, "time": "20.00"},
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,28 +129,30 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
+            SizedBox(height: 30),
 
-            ClipRRect(
-              child: Image.asset(
-                'assets/weather.png',
-                fit: BoxFit.cover,
-                width: 250,
-                height: 250,
-                errorBuilder: (context, error, stackTrace) {
-                  return const Text(
-                    'Image not found',
-                    style: TextStyle(color: Colors.red),
-                  );
-                },
-              ),
+            Image.asset(
+              'assets/icon1.png',
+              fit: BoxFit.cover,
+              width: 200,
+              height: 200,
+              errorBuilder: (context, error, stackTrace) {
+                return const Text(
+                  'Image not found',
+                  style: TextStyle(color: Colors.red),
+                );
+              },
             ),
 
-            Text(
-              "23",
-              style: TextStyle(
-                fontSize: 90,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.only(left: 25, top: 10),
+              child: Text(
+                "23°",
+                style: TextStyle(
+                  fontSize: 70,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Text(
@@ -143,7 +163,7 @@ class _HomepageState extends State<Homepage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Material(
@@ -201,6 +221,63 @@ class _HomepageState extends State<Homepage> {
                         ),
                       ),
                       Divider(color: Colors.white, thickness: 2),
+
+                      SizedBox(
+                        height: 130,
+
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: forecast.length,
+                          itemBuilder: (BuildContext context, index) {
+                            final item = forecast[index];
+                            return Card(
+                              color: Color(0xff76b5c5),
+                              margin: EdgeInsets.symmetric(
+                                horizontal: 5,
+                                vertical: 5,
+                              ),
+
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 25,
+                                  vertical: 10,
+                                ),
+                                child: SizedBox(
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      SizedBox(height: 5),
+                                      Text(
+                                        item["temp"],
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      SizedBox(height: 5),
+                                      FaIcon(
+                                        item["icon"],
+                                        color: Colors.white,
+                                        size: 28,
+                                      ),
+                                      SizedBox(height: 5),
+                                      Text(
+                                        item["time"],
+                                        style: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -208,6 +285,30 @@ class _HomepageState extends State<Homepage> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black54,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: "Add"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: "Settings",
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Color(0xff76b5c5),
+        unselectedItemColor: Colors.white,
+
+        selectedIconTheme: IconThemeData(color: Color(0xff76b5c5), size: 32),
+        unselectedIconTheme: IconThemeData(color: Colors.white, size: 28),
+
+        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        selectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 15,
+        ),
+        onTap: _onItemTapped,
       ),
     );
   }
