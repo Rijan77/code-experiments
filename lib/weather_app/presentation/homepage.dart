@@ -79,6 +79,14 @@ class _HomepageState extends State<Homepage> {
             //   child: Text("today"),
             // ),
             Container(
+              height: 25,
+              width: 80,
+
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(width: 2, color: Colors.white),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -101,14 +109,6 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                 ],
-              ),
-              height: 25,
-              width: 80,
-
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(width: 2, color: Colors.white),
               ),
             ),
 

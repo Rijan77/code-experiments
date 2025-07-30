@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'dart:convert';
 
 import 'package:try_project/jokes_app/model/jokes_model.dart';
 
@@ -27,5 +26,6 @@ class JokesApi {
     } catch (e) {
       print("Error: $e");
     }
+    return null;
   }
 }
