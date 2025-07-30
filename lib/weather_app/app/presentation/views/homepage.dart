@@ -92,15 +92,6 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
 
-            // ElevatedButton(
-            //   style: ElevatedButton.styleFrom(
-            //     side: BorderSide(width: 2, color: Colors.white),
-            //     backgroundColor: Colors.transparent,
-            //     foregroundColor: Colors.white,
-            //   ),
-            //   onPressed: () {},
-            //   child: Text("today"),
-            // ),
             Container(
               height: 0.035.sh,
               width: 0.26.sw,
