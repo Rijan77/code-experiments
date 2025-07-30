@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Homepage extends StatefulWidget {
@@ -55,7 +56,7 @@ class _HomepageState extends State<Homepage> {
                   FaIcon(
                     FontAwesomeIcons.gripVertical,
                     color: Colors.white,
-                    size: 20,
+                    size: 20.sp,
                   ),
 
                   Row(
@@ -65,13 +66,13 @@ class _HomepageState extends State<Homepage> {
                         icon: Icon(
                           Icons.location_on,
                           color: Colors.white,
-                          size: 30,
+                          size: 30.sp,
                         ),
                       ),
                       Text(
                         "Kathmandu",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),
@@ -81,7 +82,11 @@ class _HomepageState extends State<Homepage> {
 
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.more_vert, color: Colors.white, size: 30),
+                    icon: Icon(
+                      Icons.more_vert,
+                      color: Colors.white,
+                      size: 30.sp,
+                    ),
                   ),
                 ],
               ),
@@ -97,8 +102,8 @@ class _HomepageState extends State<Homepage> {
             //   child: Text("today"),
             // ),
             Container(
-              height: 25,
-              width: 80,
+              height: 0.035.sh,
+              width: 0.26.sw,
 
               decoration: BoxDecoration(
                 color: Colors.transparent,
@@ -134,8 +139,8 @@ class _HomepageState extends State<Homepage> {
             Image.asset(
               'assets/icon1.png',
               fit: BoxFit.cover,
-              width: 200,
-              height: 200,
+              width: 0.53.sw,
+              height: 0.22.sh,
               errorBuilder: (context, error, stackTrace) {
                 return const Text(
                   'Image not found',
@@ -149,7 +154,7 @@ class _HomepageState extends State<Homepage> {
               child: Text(
                 "23°",
                 style: TextStyle(
-                  fontSize: 70,
+                  fontSize: 70.sp,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -158,7 +163,7 @@ class _HomepageState extends State<Homepage> {
             Text(
               "Thunderclouds",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 15.sp,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
@@ -173,7 +178,7 @@ class _HomepageState extends State<Homepage> {
                 color:
                     Colors.transparent, // Keep background transparent if needed
                 child: Container(
-                  height: 200,
+                  height: 190.sp,
                   width: double.infinity,
 
                   decoration: BoxDecoration(
@@ -223,7 +228,7 @@ class _HomepageState extends State<Homepage> {
                       Divider(color: Colors.white, thickness: 2),
 
                       SizedBox(
-                        height: 130,
+                        height: 120.sp,
 
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -238,7 +243,7 @@ class _HomepageState extends State<Homepage> {
                               ),
 
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(
+                                padding: EdgeInsets.symmetric(
                                   horizontal: 25,
                                   vertical: 10,
                                 ),

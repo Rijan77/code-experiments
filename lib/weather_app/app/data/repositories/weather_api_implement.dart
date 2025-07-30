@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:try_project/weather_app/app/data/models/weather_api_model.dart';
 import 'package:try_project/weather_app/app/domain/repositories/weather_api_abstract.dart';
 

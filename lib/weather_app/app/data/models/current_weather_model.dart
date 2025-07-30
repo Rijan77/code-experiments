@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 
 class CurrentWeatherModel {
   double? tempC;
