@@ -163,11 +163,10 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Material(
-                elevation: 8, // Shadow depth
+                elevation: 8,
 
                 borderRadius: BorderRadius.circular(12),
-                color:
-                    Colors.transparent, // Keep background transparent if needed
+                color: Colors.transparent,
                 child: Container(
                   height: 190.sp,
                   width: double.infinity,
