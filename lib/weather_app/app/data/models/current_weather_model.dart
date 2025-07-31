@@ -1,4 +1,3 @@
-
 class CurrentWeatherModel {
   double? tempC;
   double? feelslikeC;
@@ -14,10 +13,12 @@ class CurrentWeatherModel {
 
   factory CurrentWeatherModel.fromJson(Map<String, dynamic> json) {
     return CurrentWeatherModel(
-      tempC: json["tempC"],
-      feelslikeC: json["feelslikeC"],
-      condition: json["condition"],
-      humidity: json["humidity"],
+      tempC: (json["temp_c"] as num?)?.toDouble(),
+      feelslikeC: (json["feelslike_c"] as num?)?.toDouble(),
+      humidity: (json["humidity"] as num?)?.toDouble(),
+      condition: json["condition"] != null
+          ? Condition.fromJson(json["condition"])
+          : null,
     );
   }
 }

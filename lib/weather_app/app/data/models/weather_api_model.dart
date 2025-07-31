@@ -12,8 +12,8 @@ class WeatherApiModel {
 
   factory WeatherApiModel.fromJson(Map<String, dynamic> json) {
     return WeatherApiModel(
-      locationModel: json["locationModel"],
-      currentWeatherModel: json["currentWeatherModel"],
+      locationModel: LocationModel.fromJson(json["location"]),
+      currentWeatherModel: CurrentWeatherModel.fromJson(json["current"]),
     );
   }
 }

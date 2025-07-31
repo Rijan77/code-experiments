@@ -41,11 +41,14 @@ dependencies:
   flutter_bloc: ^9.1.1
   equatable: ^2.0.7
 
+  nepali_date_picker: ^7.0.0
+
   flutter_screenutil: ^5.9.3
 
   dio: 
 
   provider: ^6.1.1
+  supabase_flutter: ^2.9.1
 
 
 dev_dependencies:
