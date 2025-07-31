@@ -12,10 +12,6 @@ class DistrictService {
         .order('district_id', ascending: true);
 
     print("Fetched data: $response");
-
-    if (response == null) {
-      throw Exception('No data returned');
-    }
     return response as List<dynamic>;
   }
 }

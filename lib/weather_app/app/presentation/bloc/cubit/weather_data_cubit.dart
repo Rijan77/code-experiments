@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:try_project/weather_app/app/core/utils/api_status.dart';
-import 'package:try_project/weather_app/app/data/models/current_weather_model.dart';
 import 'package:try_project/weather_app/app/data/models/weather_api_model.dart';
 import 'package:try_project/weather_app/app/data/repositories/weather_api_implement.dart';
 

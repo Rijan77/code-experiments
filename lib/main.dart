@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:try_project/weather_app/app/presentation/bloc/cubit/weather_data_cubit.dart';
-import 'package:try_project/weather_app/app/presentation/views/button.dart';
 import 'package:try_project/weather_app/app/presentation/views/homepage.dart';
 
 void main() async {

@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:try_project/weather_app/app/core/utils/api_status.dart';
-import 'package:try_project/weather_app/app/data/repositories/district_service.dart';
 import 'package:try_project/weather_app/app/presentation/bloc/cubit/weather_data_cubit.dart';
 
 class Homepage extends StatefulWidget {
