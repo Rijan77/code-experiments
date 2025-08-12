@@ -53,6 +53,7 @@ dependencies:
 
   provider: ^6.1.1
   supabase_flutter: ^2.9.1
+  fluttertoast: ^8.2.12
 
 
 dev_dependencies:

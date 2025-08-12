@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+class FlutterToastTry extends StatefulWidget {
+  const FlutterToastTry({super.key});
+
+  @override
+  State<FlutterToastTry> createState() => _FlutterToastTryState();
+}
+
+class _FlutterToastTryState extends State<FlutterToastTry> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: TextButton(
+          onPressed: () {
+            Fluttertoast.showToast(
+              msg: "Hello Rijan",
+              gravity: ToastGravity.BOTTOM,
+            );
+          },
+          child: Text("Show Toast Notification"),
+        ),
+      ),
+    );
+  }
+}

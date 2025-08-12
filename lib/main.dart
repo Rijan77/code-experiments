@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:try_project/try/%20fluttertoast_try.dart';
 import 'package:try_project/try/intrinsic_height%20.dart';
 import 'package:try_project/weather_app/app/presentation/bloc/cubit/weather_data_cubit.dart';
 import 'package:try_project/weather_app/app/presentation/views/homepage.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         create: (_) => WeatherDataCubit(),
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: IntrinsicHeightSt(),
+          home: FlutterToastTry(),
         ),
       ),
     );
