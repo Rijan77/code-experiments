@@ -32,10 +32,7 @@ class MyApp extends StatelessWidget {
 
       child: BlocProvider(
         create: (_) => WeatherDataCubit(),
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: FlutterToastTry(),
-        ),
+        child: MaterialApp(debugShowCheckedModeBanner: false, home: Homepage()),
       ),
     );
   }

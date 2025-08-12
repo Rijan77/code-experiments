@@ -16,7 +16,7 @@ class _FlutterToastTryState extends State<FlutterToastTry> {
         child: TextButton(
           onPressed: () {
             Fluttertoast.showToast(
-              msg: "Hello Rijan",
+              msg: "Hello Rijan, how are you",
               gravity: ToastGravity.TOP,
               toastLength: Toast.LENGTH_LONG,
               backgroundColor: Colors.blue,
