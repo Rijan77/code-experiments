@@ -16,9 +16,19 @@ class _IntrinsicHeightStState extends State<IntrinsicHeightSt> {
         children: [
           IntrinsicHeight(
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Container(height: 30, width: 20, color: Colors.red),
-                Divider(thickness: 2),
+                Container(width: 20, color: Colors.red),
+                VerticalDivider(thickness: 4, color: Colors.black),
+                Container(
+                  width: 100,
+                  color: Colors.amber,
+                  child: CircleAvatar(radius: 50),
+                ),
+                VerticalDivider(thickness: 4, color: Colors.black),
+                Container(width: 100, color: Colors.amber),
+                VerticalDivider(thickness: 4, color: Colors.black),
+                Container(width: 100, color: Colors.amber),
               ],
             ),
           ),
