@@ -20,10 +20,8 @@ class _FlutterToastTryState extends State<FlutterToastTry> {
               gravity: ToastGravity.TOP,
               toastLength: Toast.LENGTH_LONG,
               backgroundColor: Colors.blue,
-
-              // backgroundColor: Colors.red,
-              // textColor: Colors.white,
-              // fontSize: 16.0,
+              textColor: Colors.white,
+              fontSize: 16.0,
             );
           },
           child: Text("Show Toast Notification"),
