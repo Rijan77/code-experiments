@@ -18,6 +18,6 @@ Future<void> pickNepaliDateRange(BuildContext context) async {
     final end = formatter.format(pickedRange.end as NepaliDateTime);
     print("Selected range: $start to $end");
   } else {
-    print("No range selected.");
+    print("Range not selected.");
   }
 }
